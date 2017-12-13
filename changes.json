@@ -1,0 +1,121 @@
+{
+	"rename" : {
+		"blockstates" : {
+			"noteblock.json" : "note_block.json",
+			"golden_rail.json": "powered_rail.json",
+			"web.json": "cobweb.json",
+			"deadbush.json": "dead_bush.json",
+			"piston_extension.json": "moving_piston.json",
+			"yellow_flower.json": "dandelion.json",
+			"brick_block.json": "bricks.json",
+			"stone_stairs.json": "cobblestone_stairs.json",
+			"wooden_pressure_plate.json": "oak_pressure_plate.json",
+			"snow.json": "snow_block",
+			"snow_layer.json": "snow.json",
+			"fence.json": "oak_fence.json",
+			"pumpkin.json": "carved_pumpkin.json",
+			"lit_pumpkin.json": "jack_o_lantern.json",
+			"trapdoor.json": "oak_trapdoor.json",
+			"fence_gate.json": "oak_fence_gate.json",
+			"waterlily.json": "lily_pad.json",
+			"nether_brick.json": "nether_bricks.json",
+			"end_bricks.json": "end_stone_bricks.json",
+			"wooden_button.json": "oak_button.json",
+			"quartz_ore.json": "nether_quartz_ore.json",
+			"hardened_clay.json": "terracotta.json",
+			"slime.json": "slime_block.json",
+			"magma.json": "magma_block.json",
+			"red_nether_brick.json": "red_nether_bricks.json",
+			"silver_shulker_box.json": "light_gray_shulker_box.json",
+			"silver_glazed_terracotta.json": "light_gray_glazed_terracotta.json",
+			"wooden_door.json": "oak_door.json",
+			"reeds.json": "sugar_cane.json"
+		},
+		
+		"textures" : {
+			"blocks" : {
+				"anvil_base.png" : "anvil.png",
+				"anvil_top_damaged_0.png" : "anvil_top.png"
+			},
+			"items" : {
+				"apple_golden.png" : "golden_apple.png",
+				"beef_cooked.png" : "cooked_beef.png"
+			}
+		},
+		
+		"models" : {
+			"block" : {
+				"acacia_door_bottom_rh.json" : "acacia_door_bottom_hinge.json"
+			},
+			"item" : {
+				"andesite_smooth.json" : "polished_andesite.json"
+			}
+		}
+	},
+	"remove": {},
+	"split":{
+		"blockstates" : [
+			"stone.json",
+			"dirt.json",
+			"planks.json",
+			"sapling.json",
+			"sand.json",
+			"log.json",
+			"log2.json",
+			"leaves.json",
+			"leaves2.json",
+			"sponge.json",
+			"sandstone.json",
+			"tallgrass.json",
+			"wool.json",
+			"red_flower.json",
+			"double_wooden_slab.json",
+			"wooden_slab.json",
+			"double_stone_slab.json",
+			"stone_slab.json",
+			"double_stone_slab2.json",
+			"stone_slab2.json",
+			"double_purpur_slab.json",
+			"purpur_slab.json",
+			"torch.json",
+			"furnace.json",
+			"lit_furnace.json",
+			"redstone_ore.json",
+			"lit_redstone_ore.json",
+			"unlit_redstone_torch.json",
+			"redstone_torch.json",
+			"monster_egg.json",
+			"stonebrick.json",
+			"brown_mushroom_block.json",
+			"red_mushroom_block.json",
+			"redstone_lamp.json",
+			"lit_redstone_lamp.json",
+			"cobblestone_wall.json",
+			"anvil.json",
+			"daylight_detector.json",
+			"daylight_detector_inverted.json",
+			"quartz_block.json",
+			"stained_hardened_clay.json",
+			"carpet.json",
+			"double_plant.json",
+			"stained_glass.json",
+			"stained_glass_pane.json",
+			"prismarine.json",
+			"red_sandstone.json",
+			"concrete.json",
+			"concrete_powder.json",
+			"unpowered_repeater.json",
+			"powered_repeater.json",
+			"unpowered_comparator.json",
+			"powered_comparator.json",
+			"bed.json",
+			"pumpkin_stem.json",
+			"melon_stem.json",
+			"flower_pot.json",
+			"skull.json",
+			"standing_banner.json",
+			"banner.json",
+			"wall_banner.json"
+		]
+	}
+}

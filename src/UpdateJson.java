@@ -1,9 +1,6 @@
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -14,10 +11,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
@@ -123,7 +118,6 @@ public class UpdateJson {
 	}
 
 	public void renameFiles(String pathAssets) {
-		File main = new File(pathAssets);
 		for (String key : renameFiles.keySet()) {
 			File rename = new File(pathAssets + key);
 			if (rename.exists()) {
@@ -169,7 +163,6 @@ public class UpdateJson {
 	}
 	
 	public void moveBlockStates(String path){
-		File main = new File(path);
 		for (String key : splits) {
 			File rename = new File(path + key);
 			if (rename.exists()) {
@@ -197,28 +190,5 @@ public class UpdateJson {
 			e.printStackTrace();
 		}
 		return null;
-	}
-
-	private void toFile(JsonObject obj, File file) {
-		Gson gson = new GsonBuilder().setPrettyPrinting().create();
-		String json = gson.toJson(obj);
-		try {
-			FileOutputStream os = new FileOutputStream(file);
-			os.write(json.getBytes());
-			os.close();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
-	private void rename(File f1, File f2) {
-		if (f1.exists()) {
-			if (!f2.exists()) {
-				f1.renameTo(f2);
-				renames++;
-			}
-		}
 	}
 }

@@ -6,3 +6,4 @@ libs/gson-2.8.2-sources.jar
 bin/ResourcePackUpdater.class
 bin/UpdateJson.class
 libs/gson-2.8.2.jar
+test.bat

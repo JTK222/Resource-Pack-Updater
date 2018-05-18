@@ -1,10 +1,15 @@
+package net.dark_roleplay.rpupdater;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 
+import javax.swing.UIManager;
+
 import com.google.gson.JsonObject;
+
+import net.dark_roleplay.rpupdater.gui.MainScreen;
 
 public class ResourcePackUpdater {
 	
@@ -12,6 +17,13 @@ public class ResourcePackUpdater {
 	public static PrintStream OUT;
 	
 	public static void main(String[] args) throws FileNotFoundException{
+//		try {
+//	        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+//	    }catch(Exception ex) {
+//	        ex.printStackTrace();
+//	    }
+//		MainScreen screen = new MainScreen();
+//		return;
 		OUT = System.out;
 		String pathUpdateFile = "";
 		String pathAssets = "";

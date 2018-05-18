@@ -1,3 +1,4 @@
+package net.dark_roleplay.rpupdater;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

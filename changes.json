@@ -1,4 +1,5 @@
 {
+	"version": "1.13",
 	"rename": {
 		"blockstates": {
 			"cracked_brick_monster_egg.json": "infested_cracked_stone_bricks.json",

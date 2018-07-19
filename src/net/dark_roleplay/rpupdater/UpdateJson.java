@@ -144,6 +144,14 @@ public class UpdateJson {
 					Path path = Paths.get(file.getPath());
 					try {
 						String content = new String(Files.readAllBytes(path), charset);
+						if(content.contains("blocks/")) {
+							content = content.replaceAll("blocks/", "block/");
+							changes++;
+						}
+						if(content.contains("items/")) {
+							content = content.replaceAll("items/", "item/");
+							changes++;
+						}
 						for (String key : renameTextures.keySet()) {
 							if(content.contains(renameTextures.get(key)))
 								changes++;
@@ -191,5 +199,12 @@ public class UpdateJson {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	public void renameFolders(String path) {
+		File rename = new File(path + "/textures/blocks");
+		rename.renameTo(new File(path + "/textures/block"));
+		File rename2 = new File(path + "/textures/items");
+		rename2.renameTo(new File(path + "/textures/item"));
 	}
 }

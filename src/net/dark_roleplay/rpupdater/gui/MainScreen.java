@@ -7,11 +7,14 @@ public class MainScreen extends JFrame{
 	private static final long serialVersionUID = 1L;
 
 	public MainScreen (){
+		setTitle("Dark Roleplay Resource Pack Updater");
 		this.setSize(600, 400);
-		this.setLocationRelativeTo(null);
-		this.add(new MainPane());
+		this.setContentPane(new MainPane());
+//		this.pack();
 		this.setVisible(true);
 		this.setResizable(false);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 	}
 
 }

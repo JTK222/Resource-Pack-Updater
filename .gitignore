@@ -7,3 +7,5 @@ bin/ResourcePackUpdater.class
 bin/UpdateJson.class
 libs/gson-2.8.2.jar
 test.bat
+/.metadata/
+/target/

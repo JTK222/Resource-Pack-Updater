@@ -16,44 +16,31 @@ public class ResourcePackUpdater {
 	JsonObject updateJson;
 	public static PrintStream OUT;
 	
+	
+	//G:\Coding\Resource Pack Updater\TestPack\assets\minecraft
+	//G:\Coding\Resource Pack Updater\ResourcePackUpdater\changes.json
 	public static void main(String[] args) throws FileNotFoundException{
-//		try {
-//	        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-//	    }catch(Exception ex) {
-//	        ex.printStackTrace();
-//	    }
-//		MainScreen screen = new MainScreen();
-//		return;
+		try {
+	        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+	    }catch(Exception ex) {
+	        ex.printStackTrace();
+	    }
+		MainScreen screen = new MainScreen();
+		return;
+	}
+	
+	public static void update(String pathUpdateFile, String pathAssets) {
 		OUT = System.out;
-		String pathUpdateFile = "";
-		String pathAssets = "";
-		if(args.length == 1){
-			pathUpdateFile = args[0];
-			while(pathAssets.isEmpty()){
-				OUT.println("Please enter the path to your assets folder:");
-				pathAssets = inputString();
-			}
-		}else if(args.length == 0){
-			while(pathUpdateFile.isEmpty()){
-				OUT.println("Please enter the path to a update json:");
-				pathUpdateFile = inputString();
-			}
-			while(pathAssets.isEmpty()){
-				OUT.println("Please enter the path to your assets folder:");
-				pathAssets = inputString();
-			}
-		}else{
-			pathUpdateFile = args[0];
-			pathAssets = args[1];
-		}
 		
 		UpdateJson uJson = new UpdateJson(pathUpdateFile);
-		uJson.renameFiles(pathAssets);
 		uJson.renameContent(pathAssets);
 		uJson.moveBlockStates(pathAssets);
-		System.out.println("Renamed " + uJson.renames + " Files!");
-		System.out.println("Changed " + uJson.changes + " Lines!");
-		System.out.println("Moved " + uJson.moves + " Blockstates!");
+		uJson.renameFiles(pathAssets);
+		uJson.renameFolders(pathAssets);
+		System.out.println("Update Stats:");
+		System.out.println(String.format("Renamed %d Files", uJson.renames));
+		System.out.println(String.format("Changed %d Files", uJson.changes));
+		System.out.println(String.format("Moved %d Files", uJson.moves));
 	}
 	
 	private static String inputString(){

@@ -67,6 +67,7 @@ public class UpdateJson {
 			}
 		}
 		System.out.println(renameTextures);
+		System.out.println();
 	}
 
 	private void addToTextures(String parent, String parentKey, JsonElement elm) {
@@ -88,8 +89,8 @@ public class UpdateJson {
 				addToModels(parent + "/" + parentKey, key, rename.get(key));
 			}
 		} else {
-			renameModels.put((parent + "/" + parentKey).replaceFirst("/", ""),
-					(parent + "/" + elm.getAsString()).replaceFirst("/", ""));
+			renameModels.put((parent + "/" + parentKey).replaceFirst("/", "").replace(".json", ""),
+					(parent + "/" + elm.getAsString()).replaceFirst("/", "").replace(".json", ""));
 		}
 	}
 
@@ -144,14 +145,6 @@ public class UpdateJson {
 					Path path = Paths.get(file.getPath());
 					try {
 						String content = new String(Files.readAllBytes(path), charset);
-						if(content.contains("blocks/")) {
-							content = content.replaceAll("blocks/", "block/");
-							changes++;
-						}
-						if(content.contains("items/")) {
-							content = content.replaceAll("items/", "item/");
-							changes++;
-						}
 						for (String key : renameTextures.keySet()) {
 							if(content.contains(renameTextures.get(key)))
 								changes++;
@@ -161,6 +154,14 @@ public class UpdateJson {
 							if(content.contains(renameModels.get(key)))
 								changes++;
 							content = content.replaceAll(key, renameModels.get(key));
+						}
+						if(content.contains("blocks/")) {
+							content = content.replaceAll("blocks/", "block/");
+							changes++;
+						}
+						if(content.contains("items/")) {
+							content = content.replaceAll("items/", "item/");
+							changes++;
 						}
 						Files.write(path, content.getBytes(charset));
 					} catch (IOException e) {

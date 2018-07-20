@@ -56,6 +56,50 @@
 		},
 
 		"textures": {
+			"entity": {
+				"boat":{
+					"boat_oak":"oak",
+					"boat_spruce":"spruce",
+					"boat_jungle":"jungle",
+					"boat_darkoak":"darkoak",
+					"boat_birch":"birch",
+					"boat_acacia":"acacia"
+				},
+				"endercrystal":{
+					"endercrystal":"end_crystal",
+					"endercrystal_beam":"end_crystal_beam"
+				},
+				"illager":{
+					"fangs":"evoker_fangs"
+				},
+				"llama":{
+					"llama_brown":"brown",
+					"llama_creamy":"creamy",
+					"llama_gray":"gray",
+					"llama_white":"white",
+					"decor":{
+						"decor_black":"black",
+						"decor_blue":"blue",
+						"decor_brown":"brown",
+						"decor_cyan":"cyan",
+						"decor_gray":"gray",
+						"decor_green":"green",
+						"decor_light_blue":"light_blue",
+						"decor_lime":"lime",
+						"decor_magenta":"magenta",
+						"decor_orange":"orange",
+						"decor_pink":"pink",
+						"decor_purple":"purple",
+						"decor_red":"red",
+						"decor_silver":"silver",
+						"decor_white":"white",
+						"decor_yellow":"yellow"
+					}
+				},
+				"wither":{
+					"wither_invul":"wither_invulnerable"
+				}
+			},
 			"blocks": {
 				"anvil_base.png": "anvil.png",
 				"anvil_top_damaged_0.png": "anvil_top.png",
@@ -453,6 +497,9 @@
 
 		"models": {
 			"block": {
+				"\"model\" *: *\"":"\"model\": \"block/",
+				"\"normal\"":"\"\"",
+				"half=":"type=",
 				"acacia_door_bottom_rh.json": "acacia_door_bottom_hinge.json",
 				"acacia_door_top_rh.json": "acacia_door_top_hinge.json",
 				"acacia_fence_gate_closed.json": "acacia_fence_gate.json",

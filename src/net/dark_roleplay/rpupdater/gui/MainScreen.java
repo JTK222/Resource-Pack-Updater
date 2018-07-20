@@ -14,7 +14,7 @@ public class MainScreen extends JFrame{
 		this.setVisible(true);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
-		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 
 }

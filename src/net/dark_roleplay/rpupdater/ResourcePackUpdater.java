@@ -10,6 +10,7 @@ import javax.swing.UIManager;
 import com.google.gson.JsonObject;
 
 import net.dark_roleplay.rpupdater.gui.MainScreen;
+import net.dark_roleplay.rpupdater.gui.StatsFrame;
 
 public class ResourcePackUpdater {
 	
@@ -41,6 +42,7 @@ public class ResourcePackUpdater {
 		System.out.println(String.format("Renamed %d Files", uJson.renames));
 		System.out.println(String.format("Changed %d Files", uJson.changes));
 		System.out.println(String.format("Moved %d Files", uJson.moves));
+		new StatsFrame(uJson.renames, uJson.changes, uJson.moves).setVisible(true);
 	}
 	
 	private static String inputString(){
